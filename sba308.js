@@ -5,7 +5,7 @@
 //  Reference Source: https://www.canva.com/design/DAFxJzEGlWs/OxnBpoTDbneAidu7eN9WLw/edit
 //  Reference Source: https://www.w3schools.com/js/js_if_else.asp
 // Reference Source: https://www.youtube.com/watch?v=PgUXiprlg1k
-// Reference Source:
+// Reference Source: https://www.youtube.com/watch?v=cFTFtuEQ-10
 
 // let generalData = {
 //   id: 333,
@@ -52,7 +52,7 @@ const learnerSubmission = [
     },
   },
   {
-    learner_id: 000,
+    learner_id: 210,
     assignment_id: 4,
     submission: {
       submitted_at: "2025-03-25",
@@ -60,7 +60,7 @@ const learnerSubmission = [
     },
   },
   {
-    learner_id: 000,
+    learner_id: 210,
     assignment_id: 10,
     submission: {
       submitted_at: "2025-04-12",
@@ -69,12 +69,12 @@ const learnerSubmission = [
   },
 ];
 
-function getLearnerData(courseInfo, assignmentGroup, learnerSubmission) {
+function getLearnerData(courseInfo, assignmentGroup, learnerSubmission) { // I know courseInfo and assignmentGroup are dulled out because i have referred to them in other parts of the code
   let totalScore = 0;
   let result = {};
   result.id = learnerSubmission[0].learner_id;
   for (let i = 0; i < learnerSubmission.length; i++) {
-    // learn submission.length includes all the blocks of code in learnerSubmission
+    // learnsubmission.length includes all the blocks of code in learnerSubmission
     result[learnerSubmission[i].assignment_id] =
       learnerSubmission[i].submission.score;
     totalScore += learnerSubmission[i].submission.score;
@@ -83,14 +83,13 @@ function getLearnerData(courseInfo, assignmentGroup, learnerSubmission) {
     console.log(result);
   }
 
-  let avg = result.avg;
+  let avg = result.avg; //it's only showing checking the learner id that's 333 and not both 210 and 333. Really confused.
+
   if (avg >= 94) {
     console.log("You have an A+!");
   } else {
     console.log("Fail");
   }
-
-  const submittedDate =
 
   // let completed = new date(submittedDate);
   // const deadline = new date(assignmentInfo.due_at);
@@ -99,6 +98,25 @@ function getLearnerData(courseInfo, assignmentGroup, learnerSubmission) {
   // } else {
   //   console.log("on time!");
   // }
+
+  // {
+  //   try { //tests code for errors
+  //     console.log("Should be included");
+
+  //     homework;
+
+  //     console.log("Not Included");
+
+  //   } catch (err) {
+
+  //     console.log("Error has occurred:" + err);
+
+  //   } finally {
+  //     console.log("Please try again");
+  //   }
+  // console.log("...Move on"); // this causes my code to break :( 
 }
 
-getLearnerData(courseInfo, assignmentGroup, learnerSubmission);
+
+  { getLearnerData(courseInfo, assignmentGroup, learnerSubmission); 
+  }
