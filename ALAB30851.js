@@ -69,12 +69,8 @@ console.log(longestString());
 // Use callback functions alongside Array methods to accomplish the following:
 
 // Sort the array by age.
-
- 
-
-
-
-
+let age =[41,25,19,58,111];
+console.log(age.sort((a,b) => a -b))
 
 //Filter the array to remove entries with an age greater than 50.
 
