@@ -1,7 +1,9 @@
 //references: https://www.freecodecamp.org/news/how-to-add-numbers-in-javascript-arrays/
 // https://www.geeksforgeeks.org/javascript-program-to-calculate-the-average-of-all-the-elements-present-in-an-array/
 //reference: https://www.geeksforgeeks.org/how-to-get-the-longest-string-in-an-array-using-javascript/
-
+//  https://www.geeksforgeeks.org/javascript-array-filter-method/
+//https://stackoverflow.com/questions/6809659/changing-the-key-name-in-an-array-of-objects
+//https://www.geeksforgeeks.org/javascript-map/
 
 /////////////////////////////////////////////////
                   //  PART 1 //
@@ -69,16 +71,37 @@ console.log(longestString());
 // Use callback functions alongside Array methods to accomplish the following:
 
 // Sort the array by age.
-let age =[41,25,19,58,111];
-console.log(age.sort((a,b) => a -b))
+
+// let age =[41,25,19,58,111];
+// console.log(age.sort((a,b) => a -b))
 
 //Filter the array to remove entries with an age greater than 50.
+function young(age) {
+    return age <= 50;
+} 
+   
+let filtered= [41,25,19,58,111].filter(young);
+    console.log(filtered)
 
+// Map the array to change the “occupation” key to “job” and increment every age by 1. 
 
+let jobs = [
+    {occupation:"Knight", age:41},
+    {occupation:"Runner", age:25},
+    {occupation:"Fry Cook", age:19},
+    {occupation:"Quiz Master", age:58},
+    {occupation:"None", age:111},
+];
 
-// Map the array to change the “occupation” key to “job” and increment every age by 1.
+let newArr = jobs.map(myFunction)
 
-
+function myFunction(job) {
+    return{
+        job: job.occupation,
+        age: job.age + 1
+    };
+}
+ console.log(newArr);
 
 // Use the reduce method to calculate the sum of the ages.
 // Then use the result to calculate the average age.
