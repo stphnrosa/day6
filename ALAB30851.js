@@ -113,8 +113,30 @@ console.log(average) //84.66666666666667
 
 
 /////////////////////////////////////////////////
-//  PART 3 //
+                //  PART 3 //
 /////////////////////////////////////////////////
+
+
+// Take an object and increment its age field.
+let sample = [
+    { id: "42", age: 1 },
+    { id: "48", age: 27 },
+    { id: "57", age: 70 },
+    { id: "63", age: 87 },
+    { id: "7", age: 112 },
+  ];
+
+let newArr = sample.map(myFunction);
+
+function myFunction(exercise) {
+      return {
+     age: exercise.age + 1,
+      };
+    }
+    console.log(newArr);
+
+
+
 
 //  Take an array of numbers and return the average.
 //Take an array of strings and return the longest string.
